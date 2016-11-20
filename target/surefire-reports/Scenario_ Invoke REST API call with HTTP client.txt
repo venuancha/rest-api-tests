@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: Scenario: Invoke REST API call with HTTP client
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.406 sec - in Scenario: Invoke REST API call with HTTP client

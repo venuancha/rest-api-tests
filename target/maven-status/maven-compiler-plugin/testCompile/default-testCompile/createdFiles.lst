@@ -1,0 +1,6 @@
+step_definitions\RESTAPISteps.class
+CucumberRunnerTest.class
+step_definitions\Quote.class
+step_definitions\Human.class
+util\LoadProperties.class
+step_definitions\Value.class

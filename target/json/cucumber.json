@@ -1,0 +1,138 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "comments": [
+          {
+            "line": 3,
+            "value": "# Assumptions:"
+          },
+          {
+            "line": 4,
+            "value": "# This scanrio runs locally. And it is a template scenario"
+          },
+          {
+            "line": 5,
+            "value": "# We assume there is an example rest api running"
+          },
+          {
+            "line": 6,
+            "value": "# And we make a rest api call"
+          },
+          {
+            "line": 7,
+            "value": "# Then we receive the response"
+          },
+          {
+            "line": 8,
+            "value": "# Two scenarios are implemented. One with RestTemplate(Spring) and"
+          },
+          {
+            "line": 9,
+            "value": "# another with HTTP client. Both scenarios make a rest call and"
+          },
+          {
+            "line": 10,
+            "value": "# verify the response message for success."
+          }
+        ],
+        "line": 12,
+        "name": "Invoke REST API call with RestTemplate",
+        "description": "",
+        "id": "this-is-a-sample-feature-for-jms-queue-scenarios;invoke-rest-api-call-with-resttemplate",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 875405353,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I Configure REST API",
+            "match": {
+              "location": "RESTAPISteps.configureSpringRestTemplate()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 468778601,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I send the GET API Request",
+            "match": {
+              "location": "RESTAPISteps.sendXMLMessage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1786299,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I Should receive the Response",
+            "match": {
+              "location": "RESTAPISteps.receiveAndAssertJsonResponse()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "Invoke REST API call with HTTP client",
+        "description": "",
+        "id": "this-is-a-sample-feature-for-jms-queue-scenarios;invoke-rest-api-call-with-http-client",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5638241,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I configure REST API with HTTP client",
+            "match": {
+              "location": "RESTAPISteps.createRestClient()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 31747293,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I send the GET API Request with HTTP client",
+            "match": {
+              "location": "RESTAPISteps.callAPIWithHTTPClient()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6938585,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I should recieve the response with success",
+            "match": {
+              "location": "RESTAPISteps.receiveRestAPIResponse()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "This is a sample feature for JMS Queue scenarios",
+    "description": "",
+    "id": "this-is-a-sample-feature-for-jms-queue-scenarios",
+    "keyword": "Feature",
+    "uri": "RESTAPI.feature"
+  }
+]
